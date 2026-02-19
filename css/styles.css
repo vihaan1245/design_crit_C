@@ -1,0 +1,315 @@
+/* Between The Stripes - Football Jersey Heritage
+   Sustainable, minimal, accessible design */
+
+:root {
+  --color-bg: #0f0f0f;
+  --color-surface: #1a1a1a;
+  --color-text: #ffffff;
+  --color-text-muted: #d0d0d0;
+  --color-accent: #c41e3a;
+  --color-accent-secondary: #0066b3;
+  --font-primary: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Bebas Neue', 'Impact', sans-serif;
+  --transition-fast: 0.15s ease;
+  --border-subtle: rgba(255,255,255,0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.text-muted {
+  color: var(--color-text-muted) !important;
+}
+
+/* Typography */
+h1, h2, h3, .display-font {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
+h3 { font-size: clamp(1.15rem, 2vw, 1.5rem); }
+
+/* Navigation */
+.navbar-heritage {
+  background: rgba(15,15,15,0.95) !important;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0.75rem 0;
+}
+
+.navbar-heritage .navbar-brand {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-text) !important;
+}
+
+.navbar-heritage .nav-link {
+  color: var(--color-text) !important;
+  transition: color var(--transition-fast);
+}
+
+.navbar-heritage .nav-link:hover,
+.navbar-heritage .nav-link.active {
+  color: var(--color-accent) !important;
+}
+
+/* Hero */
+.hero-section {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(196,30,58,0.08), transparent);
+}
+
+.hero-section .lead {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  max-width: 540px;
+}
+
+/* Cards */
+.jersey-card {
+  background: var(--color-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.jersey-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.15);
+}
+
+.jersey-card .jersey-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: contain;
+  background: var(--color-bg);
+}
+
+.jersey-card .card-body {
+  padding: 1.25rem;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-subtle);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 0.4rem;
+  width: 12px;
+  height: 12px;
+  margin-left: -5px;
+  background: var(--color-accent);
+  border-radius: 50%;
+}
+
+.timeline-item h4 {
+  margin-bottom: 0.25rem;
+}
+
+.timeline-item .text-muted {
+  font-size: 0.9rem;
+}
+
+/* Modals & overlays */
+.modal-heritage .modal-content {
+  background: var(--color-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--color-text);
+}
+
+.modal-heritage .modal-body,
+.modal-heritage .modal-header,
+.modal-heritage p,
+.modal-heritage .small {
+  color: var(--color-text) !important;
+}
+
+.modal-heritage .text-muted {
+  color: var(--color-text-muted) !important;
+}
+
+.modal-heritage .btn-close {
+  filter: invert(1);
+}
+
+/* Tooltips */
+[data-bs-toggle="tooltip"] {
+  cursor: help;
+}
+
+/* Purpose section */
+.purpose-card {
+  background: var(--color-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 2rem;
+  color: var(--color-text);
+}
+
+.purpose-card .text-muted {
+  color: var(--color-text-muted) !important;
+}
+
+/* Footer */
+.footer-heritage {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.875rem;
+  color: var(--color-text);
+}
+
+.footer-heritage a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.footer-heritage a:hover {
+  color: var(--color-accent);
+}
+
+/* Lazy loading placeholder */
+.jersey-img {
+  background: var(--color-bg);
+  min-height: 200px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 50vh;
+    padding: 2rem 0;
+  }
+  
+  .jersey-detail-img {
+    max-height: 50vh;
+  }
+}
+
+/* Filters */
+.filter-pill {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  color: var(--color-text);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-pill:hover, .filter-pill.active {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(196,30,58,0.1);
+}
+
+/* Save button */
+.btn-save {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity var(--transition-fast);
+  z-index: 2;
+}
+
+.btn-save:hover { opacity: 1; background: rgba(0,0,0,0.8); }
+.btn-save.saved { color: var(--color-accent); }
+.btn-save.saved .save-icon { color: var(--color-accent); }
+
+/* Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  cursor: zoom-out;
+}
+
+.lightbox-overlay img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  cursor: default;
+}
+
+.lightbox-overlay .lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Compare mode */
+.jersey-card.compare-selected {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

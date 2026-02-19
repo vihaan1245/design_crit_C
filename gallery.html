@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore eight iconic football jerseys from different clubs, competitions, and eras.">
+  <title>Jersey Gallery | Between The Stripes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-heritage fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Between The Stripes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+          <li class="nav-item"><a class="nav-link" href="purpose.html">Purpose</a></li>
+          <li class="nav-item"><a class="nav-link" href="saved.html">Saved <span id="savedCount" class="badge bg-danger ms-1" style="display:none">0</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" style="padding-top: 100px;">
+    <header class="mb-4">
+      <h1 class="display-font mb-2">Jersey Gallery</h1>
+      <p class="text-muted mb-4">Eight iconic kits from clubs, nations, and eras. Click any jersey for details, or save your favourites.</p>
+      <div class="d-flex flex-wrap gap-2 mb-3">
+        <button type="button" class="filter-pill active" data-filter="all">All</button>
+        <button type="button" class="filter-pill" data-filter="era:1990s">1990s</button>
+        <button type="button" class="filter-pill" data-filter="era:2000s">2000s</button>
+        <button type="button" class="filter-pill" data-filter="era:2010s">2010s</button>
+        <span class="vr align-self-center mx-1 d-none d-md-inline"></span>
+        <button type="button" class="filter-pill" data-filter="color:Red">Red</button>
+        <button type="button" class="filter-pill" data-filter="color:Blue">Blue</button>
+        <button type="button" class="filter-pill" data-filter="color:Yellow">Yellow</button>
+      </div>
+    </header>
+
+    <div id="gallery-grid" class="row g-4">
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-era-key="1990s" data-color="Red">
+        <div class="jersey-card h-100 d-flex flex-column">
+          <div class="position-relative" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-jersey-id="1" role="button" tabindex="0" aria-label="Quick view Ajax 1971–73">
+            <button type="button" class="btn-save" data-jersey-id="1" aria-label="Save jersey" title="Save to favourites" onclick="event.stopPropagation()"><span class="save-icon">♡</span></button>
+            <img src="Ajax.png" alt="Ajax 1971–73" loading="lazy" class="jersey-img w-100">
+            <div class="card-body">
+              <h3 class="h6 mb-1">Ajax</h3>
+              <p class="small text-muted mb-0">European Cup · Red & White</p>
+            </div>
+          </div>
+          <a href="jersey.html?id=1" class="btn btn-outline-secondary btn-sm m-2 mt-auto">View details →</a>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-era-key="2000s" data-color="Red">
+        <div class="jersey-card h-100 d-flex flex-column">
+          <div class="position-relative" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-jersey-id="2" role="button" tabindex="0" aria-label="Quick view Arsenal">
+            <button type="button" class="btn-save" data-jersey-id="2" aria-label="Save jersey" title="Save to favourites" onclick="event.stopPropagation()"><span class="save-icon">♡</span></button>
+            <img src="Arsenal.png" alt="Arsenal" loading="lazy" class="jersey-img w-100">
+            <div class="card-body">
+              <h3 class="h6 mb-1">Arsenal</h3>
+              <p class="small text-muted mb-0">First Division · Red & White</p>
+            </div>
+          </div>
+          <a href="jersey.html?id=2" class="btn btn-outline-secondary btn-sm m-2 mt-auto">View details →</a>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-era-key="2010s" data-color="Blue">
+        <div class="jersey-card h-100 d-flex flex-column">
+          <div class="position-relative" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-jersey-id="3" role="button" tabindex="0" aria-label="Quick view Barcelona">
+            <button type="button" class="btn-save" data-jersey-id="3" aria-label="Save jersey" title="Save to favourites" onclick="event.stopPropagation()"><span class="save-icon">♡</span></button>
+            <img src="Barcelona.png" alt="Barcelona" loading="lazy" class="jersey-img w-100">
+            <div class="card-body">
+              <h3 class="h6 mb-1">Barcelona</h3>
+              <p class="small text-muted mb-0">La Liga · Blaugrana</p>
+            </div>
+          </div>
+          <a href="jersey.html?id=3" class="btn btn-outline-secondary btn-sm m-2 mt-auto">View details →</a>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-era-key="2000s" data-color="Yellow">
+        <div class="jersey-card h-100 d-flex flex-column">
+          <div class="position-relative" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-jersey-id="4" role="button" tabindex="0" aria-label="Quick view Brazil 1970">
+            <button type="button" class="btn-save" data-jersey-id="4" aria-label="Save jersey" title="Save to favourites" onclick="event.stopPropagation()"><span class="save-icon">♡</span></button>
+            <img src="Brazil.png" alt="Brazil 1970" loading="lazy" class="jersey-img w-100">
+            <div class="card-body">
+              <h3 class="h6 mb-1">Brazil</h3>
+              <p class="small text-muted mb-0">World Cup · Yellow & Green</p>
+            </div>
+          </div>
+          <a href="jersey.html?id=4" class="btn btn-outline-secondary btn-sm m-2 mt-auto">View details →</a>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-era-key="2010s" data-color="Blue">
+        <div class="jersey-card h-100 d-flex flex-column">
+          <div class="position-relative" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-jersey-id="5" role="button" tabindex="0" aria-label="Quick view Chelsea">
+            <button type="button" class="btn-save" data-jersey-id="5" aria-label="Save jersey" title="Save to favourites" onclick="event.stopPropagation()"><span class="save-icon">♡</span></button>
+            <img src="chelsea_jersey.png" alt="Chelsea" loading="lazy" class="jersey-img w-100">
+            <div class="card-body">
+              <h3 class="h6 mb-1">Chelsea</h3>
+              <p class="small text-muted mb-0">FA Cup · Blue & White</p>
+            </div>
+          </div>
+          <a href="jersey.html?id=5" class="btn btn-outline-secondary btn-sm m-2 mt-auto">View details →</a>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-era-key="2000s" data-color="Blue">
+        <div class="jersey-card h-100 d-flex flex-column">
+          <div class="position-relative" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-jersey-id="6" role="button" tabindex="0" aria-label="Quick view Manchester City">
+            <button type="button" class="btn-save" data-jersey-id="6" aria-label="Save jersey" title="Save to favourites" onclick="event.stopPropagation()"><span class="save-icon">♡</span></button>
+            <img src="Manchester City.png" alt="Manchester City" loading="lazy" class="jersey-img w-100">
+            <div class="card-body">
+              <h3 class="h6 mb-1">Manchester City</h3>
+              <p class="small text-muted mb-0">First Division · Sky Blue</p>
+            </div>
+          </div>
+          <a href="jersey.html?id=6" class="btn btn-outline-secondary btn-sm m-2 mt-auto">View details →</a>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-era-key="1990s" data-color="Red">
+        <div class="jersey-card h-100 d-flex flex-column">
+          <div class="position-relative" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-jersey-id="7" role="button" tabindex="0" aria-label="Quick view AC Milan">
+            <button type="button" class="btn-save" data-jersey-id="7" aria-label="Save jersey" title="Save to favourites" onclick="event.stopPropagation()"><span class="save-icon">♡</span></button>
+            <img src="Milan.png" alt="AC Milan" loading="lazy" class="jersey-img w-100">
+            <div class="card-body">
+              <h3 class="h6 mb-1">AC Milan</h3>
+              <p class="small text-muted mb-0">Serie A · Red & Black</p>
+            </div>
+          </div>
+          <a href="jersey.html?id=7" class="btn btn-outline-secondary btn-sm m-2 mt-auto">View details →</a>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-era-key="2000s" data-color="Blue">
+        <div class="jersey-card h-100 d-flex flex-column">
+          <div class="position-relative" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-jersey-id="8" role="button" tabindex="0" aria-label="Quick view FC Porto">
+            <button type="button" class="btn-save" data-jersey-id="8" aria-label="Save jersey" title="Save to favourites" onclick="event.stopPropagation()"><span class="save-icon">♡</span></button>
+            <img src="Porto.png" alt="FC Porto" loading="lazy" class="jersey-img w-100">
+            <div class="card-body">
+              <h3 class="h6 mb-1">FC Porto</h3>
+              <p class="small text-muted mb-0">European Cup · Blue & White</p>
+            </div>
+          </div>
+          <a href="jersey.html?id=8" class="btn btn-outline-secondary btn-sm m-2 mt-auto">View details →</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-heritage">
+    <div class="container text-center">
+      <p class="mb-1">Between The Stripes · Football Jersey Heritage</p>
+      <p class="mb-0 small">Educational platform · No advertisements · No data collection</p>
+    </div>
+  </footer>
+
+  <div class="modal fade modal-heritage" id="quickViewModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-secondary">
+          <h2 class="modal-title h5" id="quickViewTitle"></h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row align-items-start">
+            <div class="col-md-5 mb-3 mb-md-0">
+              <img id="quickViewImg" src="" alt="" class="img-fluid rounded" style="max-height: 280px; object-fit: contain;">
+            </div>
+            <div class="col-md-7">
+              <p id="quickViewMeta" class="text-muted small mb-2"></p>
+              <p id="quickViewDesc" class="small"></p>
+              <div class="d-flex gap-2">
+                <a id="quickViewLink" href="#" class="btn btn-danger btn-sm">View full details</a>
+                <button type="button" id="quickViewSave" class="btn btn-outline-secondary btn-sm">♡ Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="js/jersey-data.js"></script>
+  <script src="js/favorites.js"></script>
+  <script>
+    function updateSaveButtons() {
+      document.querySelectorAll('.btn-save').forEach(function(btn) {
+        var id = parseInt(btn.dataset.jerseyId, 10);
+        var icon = btn.querySelector('.save-icon');
+        if (typeof isSaved === 'function' && isSaved(id)) {
+          btn.classList.add('saved');
+          if (icon) icon.textContent = '♥';
+        } else {
+          btn.classList.remove('saved');
+          if (icon) icon.textContent = '♡';
+        }
+      });
+      var countEl = document.getElementById('savedCount');
+      if (countEl && typeof getSaved === 'function') {
+        var n = getSaved().length;
+        countEl.textContent = n;
+        countEl.style.display = n ? 'inline' : 'none';
+      }
+    }
+    document.querySelectorAll('.filter-pill').forEach(function(pill) {
+      pill.addEventListener('click', function() {
+        document.querySelectorAll('.filter-pill').forEach(function(p) { p.classList.remove('active'); });
+        pill.classList.add('active');
+        var f = pill.dataset.filter;
+        document.querySelectorAll('.gallery-item').forEach(function(item) {
+          var show = f === 'all' ||
+            (f.startsWith('era:') && item.dataset.eraKey === f.slice(4)) ||
+            (f.startsWith('color:') && item.dataset.color === f.slice(6));
+          item.style.display = show ? '' : 'none';
+        });
+      });
+    });
+    document.querySelectorAll('.btn-save').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var id = parseInt(btn.dataset.jerseyId, 10);
+        if (typeof toggleSaved === 'function') toggleSaved(id);
+        updateSaveButtons();
+      });
+    });
+    updateSaveButtons();
+    document.querySelectorAll('[data-bs-toggle="modal"][data-jersey-id]').forEach(function(el) {
+      el.addEventListener('keydown', function(ev) {
+        if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); el.click(); }
+      });
+    });
+    document.getElementById('quickViewModal').addEventListener('show.bs.modal', function(e) {
+      var trigger = e.relatedTarget;
+      if (!trigger || !trigger.dataset.jerseyId) return;
+      var id = parseInt(trigger.dataset.jerseyId, 10);
+      var j = typeof JERSEYS !== 'undefined' && JERSEYS[id];
+      if (!j) return;
+      document.getElementById('quickViewTitle').textContent = j.name;
+      document.getElementById('quickViewImg').src = j.image;
+      document.getElementById('quickViewImg').alt = j.name;
+      document.getElementById('quickViewMeta').textContent = j.club + ' · ' + j.era + ' · ' + j.competition;
+      document.getElementById('quickViewDesc').textContent = j.description;
+      document.getElementById('quickViewLink').href = 'jersey.html?id=' + id;
+      var saveBtn = document.getElementById('quickViewSave');
+      if (saveBtn) {
+        saveBtn.dataset.jerseyId = id;
+        saveBtn.textContent = (typeof isSaved === 'function' && isSaved(id)) ? '♥ Saved' : '♡ Save';
+        saveBtn.onclick = function() {
+          if (typeof toggleSaved === 'function') toggleSaved(id);
+          saveBtn.textContent = (typeof isSaved === 'function' && isSaved(id)) ? '♥ Saved' : '♡ Save';
+          updateSaveButtons();
+        };
+      }
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
